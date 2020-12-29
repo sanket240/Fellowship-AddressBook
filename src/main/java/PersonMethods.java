@@ -110,4 +110,39 @@ public class PersonMethods {
         List<Person> streamList=person.stream().filter(person1 ->state.equals(person1.getState()) ).collect(Collectors.toList());
         System.out.println("Persons in State: "+streamList);
     }
+    public void viewByCity()
+    {
+        String city;
+        Dictionary infoCity=new Hashtable();
+        System.out.println("Enter city name:");
+        city=s.nextLine();
+        List<Person> streamList=person.stream().filter(person1 ->city.equals(person1.getCity()) ).collect(Collectors.toList());
+        System.out.println("Persons in city: "+streamList);
+        for(Person a:person)
+        {
+            if(a.city.equals(city))
+            {
+                infoCity.put(a.firstName,city);
+            }
+        }
+        System.out.println("The Dictionary Contains:"+infoCity);
+    }
+    public void viewByState()
+    {
+        String state;
+        Dictionary infoState=new Hashtable();
+        System.out.println("Enter State name:");
+        state=s.nextLine();
+        List<Person> streamList=person.stream().filter(person1 ->state.equals(person1.getState()) ).collect(Collectors.toList());
+        System.out.println("Persons in State: "+streamList);
+        for(Person a:person)
+        {
+            if(a.city.equals(state))
+            {
+                infoState.put(a.firstName,state);
+            }
+
+        }
+        System.out.println("The Dictionary Contains:"+infoState);
+    }
 }
