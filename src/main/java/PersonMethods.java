@@ -145,4 +145,20 @@ public class PersonMethods {
         }
         System.out.println("The Dictionary Contains:"+infoState);
     }
+    public void viewCountByCity()
+    {
+        String city;
+        System.out.println("Enter city name:");
+        city=s.nextLine();
+        int cnt= (int) person.stream().filter(person1 ->city.equals(person1.getCity()) ).count();
+        System.out.println("Total Person Count in "+city+" city is:"+cnt);
+    }
+    public void viewCountByState()
+    {
+        String state;
+        System.out.println("Enter city name:");
+        state=s.nextLine();
+        int cnt= (int) person.stream().filter(person1 ->state.equals(person1.getState()) ).count();
+        System.out.println("Total Person Count in "+state+" city is:"+cnt);
+    }
 }

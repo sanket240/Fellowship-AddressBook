@@ -7,7 +7,7 @@ public class AddressBookMain {
         PersonMethods personmethods=new PersonMethods();
         while (choice!=0)
         {
-            System.out.println("1.Add Person\n2.Update Person\n3.Delete Person\n4.Display Person\n5.Search By City\n6.Search By State\n7.View by city\n8.View by state");
+            System.out.println("1.Add Person\n2.Update Person\n3.Delete Person\n4.Display Person\n5.Search By City\n6.Search By State\n7.View by city\n8.View by state\n9.View count by state\n10.View count by city");
             System.out.println("Enter your choice:");
             choice=s.nextInt();
             switch (choice)
@@ -46,6 +46,12 @@ public class AddressBookMain {
                     break;
                 case 8:
                     personmethods.viewByState();
+                    break;
+                case 9:
+                    personmethods.viewCountByState();
+                    break;
+                case 10:
+                    personmethods.viewCountByCity();
                     break;
             }
         }
