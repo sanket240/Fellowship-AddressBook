@@ -5,7 +5,6 @@ public class Person
     String city,state;
     int zip;
     String phNo;
-
     public String getFirstName() {
         return firstName;
     }

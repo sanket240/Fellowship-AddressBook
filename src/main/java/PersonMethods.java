@@ -166,4 +166,19 @@ public class PersonMethods {
         List<Person> nameSortedList=person.stream().sorted((e1,e2)->e1.getFirstName().compareTo(e2.getFirstName())).collect(Collectors.toList());
         System.out.println("Sorted Persons Alphabetically\n: "+nameSortedList);
     }
+    public void sortByCity()
+    {
+        List<Person> citySortedList=person.stream().sorted((e1,e2)->e1.getCity().compareTo(e2.getCity())).collect(Collectors.toList());
+        System.out.println("Sorted Persons by City\n: "+citySortedList);
+    }
+    public void sortByState()
+    {
+        List<Person> stateSortedList=person.stream().sorted((e1,e2)->e1.getState().compareTo(e2.getState())).collect(Collectors.toList());
+        System.out.println("Sorted Persons by State\n: "+stateSortedList);
+    }
+    public void sortByZip()
+    {
+        List<Person> zipSortedList=person.stream().sorted((e1,e2)->e1.getState().compareTo(e2.getState())).collect(Collectors.toList());
+        System.out.println("Sorted Persons by Zip\n: "+zipSortedList);
+    }
 }
