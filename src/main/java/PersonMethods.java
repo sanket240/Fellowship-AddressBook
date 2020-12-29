@@ -93,4 +93,21 @@ public class PersonMethods {
             }
         }
     }
+    public void searchByCity()
+    {
+        String city;
+        System.out.println("Enter city name:");
+        city=s.nextLine();
+        // Person p= (Person) person.stream().filter(person1 ->city.equals(person1.getCity()) ).findAny().orElse(null);
+        List<Person> streamList=person.stream().filter(person1 ->city.equals(person1.getCity()) ).collect(Collectors.toList());
+        System.out.println("Persons in city: "+streamList);
+    }
+    public void searchByState()
+    {
+        String state;
+        System.out.println("Enter State name:");
+        state=s.nextLine();
+        List<Person> streamList=person.stream().filter(person1 ->state.equals(person1.getState()) ).collect(Collectors.toList());
+        System.out.println("Persons in State: "+streamList);
+    }
 }
