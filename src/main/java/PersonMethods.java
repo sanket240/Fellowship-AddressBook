@@ -161,4 +161,9 @@ public class PersonMethods {
         int cnt= (int) person.stream().filter(person1 ->state.equals(person1.getState()) ).count();
         System.out.println("Total Person Count in "+state+" city is:"+cnt);
     }
+    public void sortByName()
+    {
+        List<Person> nameSortedList=person.stream().sorted((e1,e2)->e1.getFirstName().compareTo(e2.getFirstName())).collect(Collectors.toList());
+        System.out.println("Sorted Persons Alphabetically\n: "+nameSortedList);
+    }
 }
